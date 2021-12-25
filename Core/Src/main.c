@@ -8,7 +8,7 @@
 #define EXTI_RTSR				  GPIO_REG(0x40013C00 , 0x08) //Rising trigger selection register
 #define EXTI_PR           	      GPIO_REG(0x40013C00 , 0x14) //Pending register
 #define NVIC_ISER0  	  	  	  (unsigned int*)(0xE000E100) //Interrupt set-enable register
-#define NVIC_ICER0          	  (unsigned int*)(NVIC_ICER0) //Interrupt clear-enable register
+#define NVIC_ICER0          	  (unsigned int*)(0XE000E180) //Interrupt clear-enable register
 
 int main(void)
 {
