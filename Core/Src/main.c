@@ -24,8 +24,8 @@ int main(void)
 	GPIO_Init( led_port , led_pin , OUTPUT,PUSH_PULL); // LED PA 1 // make sure the clock is enabled
 
 	(*RCC_APB2ENR) |= 0x00004000;  // enable system config on pin 14
-	(*SYSCFG_EXTICR1) |= 0x00000000; // enable external interrupt 0 , 1 on port A
-	(*EXTI_IMR) |= 0x00000003; // not masking line 0,1
+	(*SYSCFG_EXTICR1) |= 0x00000000; // enable external interrupt 0
+	(*EXTI_IMR) |= 0x00000001; // not masking line 0
 	(*EXTI_FTSR) |= 0x00000001; // enable falling edge for line 0 (button)
 	(*EXTI_RTSR) |= 0x00000000; // disable rising edge for line 0 (button)
 
