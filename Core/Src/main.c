@@ -49,9 +49,6 @@ void toggle_led_by_interrupt()
 		Data = !GPIO_ReadPin(led_port,led_pin) ;
 		GPIO_WritePin(led_port, led_pin, Data);
 
-		// not to toggle more than once in one press
-		while (GPIO_ReadPin(button_port,button_pin) == 0) {state = 1;}
-
 		*EXTI_PR = 0x00000001; // clear PR0 by setting it to 1
 
 	}
