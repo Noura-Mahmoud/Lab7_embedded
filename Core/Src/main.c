@@ -16,10 +16,7 @@ int main(void)
 	unsigned char led_port = 0;
 	unsigned char button_pin = 0;
 	unsigned char led_pin = 1;
-
-	unsigned char state = 1;
-
-
+    
 	GPIO_Init( button_port , button_pin , INPUT,PULL_UP); // push button PA 0 // make sure the clock is enabled
 	GPIO_Init( led_port , led_pin , OUTPUT,PUSH_PULL); // LED PA 1 // make sure the clock is enabled
 
@@ -39,11 +36,8 @@ int main(void)
 
 void toggle_led_by_interrupt()
 	{
-	    unsigned char button_port = 0;
 		unsigned char led_port = 0;
-		unsigned char button_pin = 0;
 		unsigned char led_pin = 1;
-		unsigned char state;
 		unsigned char Data;
 
 		Data = !GPIO_ReadPin(led_port,led_pin) ;
