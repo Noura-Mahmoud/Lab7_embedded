@@ -1,0 +1,2 @@
+7segment.c:4:6:_7segment_display	16	static
+7segment.c:123:6:_7segment_TurnOff	8	static
